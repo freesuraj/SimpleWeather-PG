@@ -28,6 +28,7 @@ class SimpleWeatherUITests: XCTestCase {
         super.tearDown()
     }
     
+    
     func testSearchCancelAndSearchValidCity() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -39,13 +40,6 @@ class SimpleWeatherUITests: XCTestCase {
         simpleweatherViewNavigationBar.buttons["Cancel"].tap()
         inputCityNameEgSingaporeSearchField.tap()
         inputCityNameEgSingaporeSearchField.typeText("London\r")
-        
-        let tablesQuery = app.tables
-        tablesQuery.staticTexts["15 degree celcius"].tap()
-        app.otherElements.containingType(.NavigationBar, identifier:"SimpleWeather.WeatherDetailView").childrenMatchingType(.Other).element.childrenMatchingType(.Other).element.childrenMatchingType(.Table).element.tap()
-        
-        let backButton = app.navigationBars["SimpleWeather.WeatherDetailView"].childrenMatchingType(.Button).matchingIdentifier("Back").elementBoundByIndex(0)
-        backButton.tap()
     }
     
     func testInvalidCitySearch() {
@@ -58,5 +52,6 @@ class SimpleWeatherUITests: XCTestCase {
         app.alerts["Error"].collectionViews.buttons["OK"].tap()
         
     }
+
     
 }

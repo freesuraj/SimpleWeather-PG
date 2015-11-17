@@ -21,6 +21,8 @@
 		ED7F4D0B1BF47063000B6AB2 /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F4D0A1BF47063000B6AB2 /* WeatherRequest.swift */; };
 		ED7F4D0D1BF4716A000B6AB2 /* WeatherFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F4D0C1BF4716A000B6AB2 /* WeatherFetcher.swift */; };
 		ED7F4D0F1BF47C6A000B6AB2 /* CityWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F4D0E1BF47C6A000B6AB2 /* CityWeather.swift */; };
+		ED7F4D111BFAF83A000B6AB2 /* notFound.json in Resources */ = {isa = PBXBuildFile; fileRef = ED7F4D101BFAF83A000B6AB2 /* notFound.json */; };
+		ED7F4D131BFAF848000B6AB2 /* singapore.json in Resources */ = {isa = PBXBuildFile; fileRef = ED7F4D121BFAF848000B6AB2 /* singapore.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		ED7F4D0A1BF47063000B6AB2 /* WeatherRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
 		ED7F4D0C1BF4716A000B6AB2 /* WeatherFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherFetcher.swift; sourceTree = "<group>"; };
 		ED7F4D0E1BF47C6A000B6AB2 /* CityWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityWeather.swift; sourceTree = "<group>"; };
+		ED7F4D101BFAF83A000B6AB2 /* notFound.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notFound.json; sourceTree = "<group>"; };
+		ED7F4D121BFAF848000B6AB2 /* singapore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = singapore.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				ED7F4CC71BF445CB000B6AB2 /* SimpleWeatherTests.swift */,
+				ED7F4D101BFAF83A000B6AB2 /* notFound.json */,
+				ED7F4D121BFAF848000B6AB2 /* singapore.json */,
 				ED7F4CC91BF445CB000B6AB2 /* Info.plist */,
 			);
 			path = SimpleWeatherTests;
@@ -340,6 +346,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED7F4D131BFAF848000B6AB2 /* singapore.json in Resources */,
+				ED7F4D111BFAF83A000B6AB2 /* notFound.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

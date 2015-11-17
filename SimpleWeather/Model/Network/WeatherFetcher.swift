@@ -13,15 +13,16 @@ import SwiftyJSON
 struct WeatherFetcher {
     static func fetch(cityName: String, response: (CityWeather?, NSString?) -> ()) {
         Alamofire.request(.GET, WeatherRequest.url, parameters: WeatherRequest.parameters(cityName))
-            .response { _, _, data, err in
-                if err != nil {
-                    return response(nil, err?.localizedDescription)
-                }
+            .response { _, _, data, _ in
                 return response(decode(data!))
         }
     }
     
-    private static func decode(data: NSData) -> (CityWeather?, NSString?) {
+    static func decode(data: NSData) -> (CityWeather?, NSString?) {
+        
+        if(data.length == 0) {
+            return (nil, "No data error")
+        }
         let json = JSON(data: data)
         let error = json["data"]["error"].arrayValue
         if(!error.isEmpty) {

@@ -18,4 +18,6 @@ struct WeatherRequest {
             "q": cityName
         ]
     }
+    
+    
 }
