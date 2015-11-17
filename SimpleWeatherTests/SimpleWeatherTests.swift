@@ -92,4 +92,11 @@ class SimpleWeatherTests: XCTestCase {
         XCTAssertNil(results.0, "For error data city weather must be nil")
         XCTAssertNotNil(results.1, "For error data error message must not be nil")
     }
+    
+    func testEmptyDataDecoding() {
+        let goodData = NSData()
+        let results = WeatherFetcher.decode(goodData)
+        XCTAssertNil(results.0, "For empty data city weather must be nil")
+        XCTAssertNotNil(results.1, "For empty data error message must not be nil")
+    }
 }
